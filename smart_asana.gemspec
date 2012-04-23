@@ -8,6 +8,7 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Add Asana using tasks using Remember the Milk's Smart Add syntax}
   gem.homepage      = "http://github.com/rbright/smart_asana"
 
+  gem.add_dependency 'activesupport', '~> 3.2.3'
   gem.add_dependency 'asana', '~> 0.0.2'
 
   gem.files         = `git ls-files`.split($\)
