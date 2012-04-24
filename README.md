@@ -67,6 +67,8 @@ tomorrow - tomorrow's date
 friday - Friday's date (other days of the week work, as well)
 ```
 
+    $ asana 'This task is due ^today'
+
 
 ## Contributing
 
