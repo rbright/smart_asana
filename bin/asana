@@ -10,12 +10,13 @@ end
 
 workspaces = Asana::Workspace.all
 
-workspace = workspaces.select{ |w|
-  w.name.downcase == attrs[:workspace].downcase
-}.first
-
-attrs.delete(:workspace)
-
-workspace ||= workspaces.first
+workspace = if attrs[:workspace]
+  workspace = workspaces.select{ |w|
+    w.name.downcase == attrs[:workspace].downcase
+  }.first
+  attrs.delete(:workspace)
+else
+  workspaces.first
+end
 
 workspace.create_task(attrs)
