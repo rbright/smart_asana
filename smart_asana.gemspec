@@ -4,8 +4,8 @@ require File.expand_path('../lib/smart_asana/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Ryan Bright"]
   gem.email         = ["ryan@rbright.net"]
-  gem.description   = %q{Add Asana using tasks using Remember the Milk's Smart Add syntax}
-  gem.summary       = %q{Add Asana using tasks using Remember the Milk's Smart Add syntax}
+  gem.description   = %q{Add Asana tasks using Remember the Milk's Smart Add syntax}
+  gem.summary       = %q{Add Asana tasks using Remember the Milk's Smart Add syntax}
   gem.homepage      = "http://github.com/rbright/smart_asana"
 
   gem.add_dependency 'activesupport', '~> 3.2.3'
