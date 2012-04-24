@@ -58,6 +58,15 @@ You can also assign a task to a specific workspace.
 Since workspace names can contain multiple words, you'll want to use
 `MixedCase` indicators. Also, workspace indicators are not case-sensitive.
 
+If you want to assign a due date to a task, you can specify it in
+a variety of ways.
+
+```text
+today - today's date
+tomorrow - tomorrow's date
+friday - Friday's date (other days of the week work, as well)
+```
+
 
 ## Contributing
 

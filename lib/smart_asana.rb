@@ -4,7 +4,8 @@ require "smart_asana/version"
 
 module SmartAsana
 
-  INDICATOR_CHARACTERS = %w{! #}
+  INDICATOR_CHARACTERS = %w{! # ^}
+  DAYS_OF_WEEK = %w{monday tuesday wednesday thursday friday saturday sunday}
 
   class << self
 
@@ -41,6 +42,24 @@ module SmartAsana
               array[:assignee_status] = assignee_status(attr)
             when '#'
               array[:workspace] = attr.titleize
+            when '^'
+              array[:due_on] = due_on(attr)
+            end
+          end
+        end
+      end
+
+      def due_on(attr)
+        case attr
+        when 'today'
+          Date.today
+        when 'tomorrow'
+          Date.today.next_day
+        else
+          if DAYS_OF_WEEK.include?(attr)
+            1.upto(7).each do |i|
+              date = Date.today.next_day(i)
+              return date if date.send("#{attr}?".to_sym)
             end
           end
         end
