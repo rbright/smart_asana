@@ -28,7 +28,7 @@ variable. This will be used to construct a new connection to Asana.
 Once the environmental variable is configured, you can add your tasks
 from the command-line.
 
-    $ asana This is a new task #TheWorkspace !1
+    $ asana This is a new task #TheWorkspace +1
 
 ### Specifying Indicators
 
