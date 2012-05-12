@@ -4,7 +4,7 @@ require "smart_asana/version"
 
 module SmartAsana
 
-  INDICATOR_CHARACTERS = %w{! # ^}
+  INDICATOR_CHARACTERS = %w{+ # ^}
   DAYS_OF_WEEK = %w{monday tuesday wednesday thursday friday saturday sunday}
 
   class << self
@@ -38,7 +38,7 @@ module SmartAsana
           indicators.each do |ind|
             attr = ind[1..ind.length]
             case ind[0]
-            when '!'
+            when '+'
               array[:assignee_status] = assignee_status(attr)
             when '#'
               array[:workspace] = attr.titleize

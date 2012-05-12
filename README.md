@@ -43,7 +43,7 @@ You can assign a task to today, upcoming, or later. All other tasks are
 dropped into your inbox. For more information about these status types,
 check out the [Tasks documentation][].
 
-    $ asana 'This task is for today !1'
+    $ asana 'This task is for today +1'
 
 ```text
 1 - today
