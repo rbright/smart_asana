@@ -66,6 +66,10 @@ friday - Friday's date (other days of the week work, as well)
 
     $ asana This task is due ^today
 
+It is also possible to enter an arbitrary date for a task.
+
+    $ asana This task is due on ^2013-01-01
+
 
 ## Contributing
 

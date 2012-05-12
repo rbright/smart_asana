@@ -86,18 +86,17 @@ module SmartAsana
       end
 
       def due_on(attr)
-        case attr
-        when 'today'
+        if attr == 'today'
           Date.today
-        when 'tomorrow'
+        elsif attr == 'tomorrow'
           Date.today.next_day
-        else
-          if DAYS_OF_WEEK.include?(attr)
-            1.upto(7).each do |i|
-              date = Date.today.next_day(i)
-              return date if date.send("#{attr}?".to_sym)
-            end
+        elsif DAYS_OF_WEEK.include?(attr)
+          1.upto(7).each do |i|
+            date = Date.today.next_day(i)
+            return date if date.send("#{attr}?".to_sym)
           end
+        else
+          Date.parse(attr)
         end
       end
 
