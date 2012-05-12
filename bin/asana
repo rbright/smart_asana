@@ -2,21 +2,8 @@
 require 'asana'
 require 'smart_asana'
 
-attrs = SmartAsana.parse(ARGV[0])
-
 Asana.configure do |client|
   client.api_key = ENV['ASANA_API_KEY']
 end
 
-workspaces = Asana::Workspace.all
-
-workspace = if attrs[:workspace]
-  workspace = workspaces.select{ |w|
-    w.name.downcase == attrs[:workspace].downcase
-  }.first
-  attrs.delete(:workspace)
-else
-  workspaces.first
-end
-
-workspace.create_task(attrs)
+SmartAsana.create_task(ARGV)
