@@ -28,10 +28,7 @@ variable. This will be used to construct a new connection to Asana.
 Once the environmental variable is configured, you can add your tasks
 from the command-line.
 
-    $ asana 'This is a new task #TheWorkspace !1'
-
-**Note:** You must include single-quotes around the task entry. Shells
-like zsh try to parse the indicator characters without them.
+    $ asana This is a new task #TheWorkspace !1
 
 ### Specifying Indicators
 
@@ -43,7 +40,7 @@ You can assign a task to today, upcoming, or later. All other tasks are
 dropped into your inbox. For more information about these status types,
 check out the [Tasks documentation][].
 
-    $ asana 'This task is for today +1'
+    $ asana This task is for today +1
 
 ```text
 1 - today
@@ -53,7 +50,7 @@ check out the [Tasks documentation][].
 
 You can also assign a task to a specific workspace.
 
-    $ asana 'This task is in #MyWorkspace'
+    $ asana This task is in #MyWorkspace
 
 Since workspace names can contain multiple words, you'll want to use
 `MixedCase` indicators. Also, workspace indicators are not case-sensitive.
@@ -67,7 +64,7 @@ tomorrow - tomorrow's date
 friday - Friday's date (other days of the week work, as well)
 ```
 
-    $ asana 'This task is due ^today'
+    $ asana This task is due ^today
 
 
 ## Contributing
